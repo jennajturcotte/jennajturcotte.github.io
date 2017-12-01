@@ -1,68 +1,289 @@
 <!DOCTYPE html>
-<html lang="en-CA">
-  <head>
-    <!-- Required meta tags -->
+<html lang="en">
+<head>
     <meta charset="utf-8">
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    >
-    <title>Robert McKenney | Demos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Home</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/pe-icons.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/website-logo.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/ico/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" href="images/ico/apple-touch-icon-57x57.png">
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="css/min/main.css"
-    >
-  </head>
-  <body>
-    <article class="container">
-      <div class="row">
-        <div class="col col-sm-7">
-          <h1 class="header-subtle">Profile</h1>
-          <h2 class="display-4">Robert L. McKenney</h2>
-          <p class="text-secondary">
-            Professor, Interactive Media Design<br>
-            School of Media and Design<br>
-            Algonquin College
-          </p>
-        </div>
-        <div class="col-4 col-sm-5  col-xl-4">
-          <img
-            src="img/rlm-headshot.png"
-            alt="Robert McKenney smiling"
-            class="img-fluid rounded-circle mb-3"
-          >
-        </div>
-      </div>
-      <p class="lead mt-3">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-      <p>
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id.
-      </p>
-      <button
-        type="button"
-        class="btn btn-primary float-right"
-      >Call to action!</button>
-    </article>
+    <script type="text/javascript">
+    jQuery(document).ready(function($){
+	'use strict';
+      	jQuery('body').backstretch([
+	        "images/bg/bgimagehome.jpg",
+	    ], {duration: 5000, fade: 500, centeredY: true });
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous">
+		$("#mapwrapper").gMap({ controls: false,
+         	scrollwheel: false,
+         	markers: [{
+              	latitude:40.7566,
+				longitude: -73.9863,
+          	icon: { image: "images/marker.png",
+              	iconsize: [44,44],
+          		iconanchor: [12,46],
+          		infowindowanchor: [12, 0] } }],
+          	icon: {
+              	image: "images/marker.png",
+             	iconsize: [26, 46],
+              	iconanchor: [12, 46],
+              	infowindowanchor: [12, 0] },
+         	latitude:40.7566,
+         	longitude: -73.9863,
+          	zoom: 14 });
+    });
     </script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
-      integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-      crossorigin="anonymous">
-    </script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
-      integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
-      crossorigin="anonymous">
-    </script>
-  </body>
+</head><!--/head-->
+<body>
+<div id="preloader"></div>
+    <header class="navbar navbar-inverse navbar-fixed-top " role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                </button>
+                <img src="images/logo/website-logo.png" width="50px">
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header><!--/header-->
+
+    <section id="main-slider" class="no-margin">
+        <div class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="carousel-content center centered">
+                                    <h2 class="boxed animation animated-item-1 fade-down">Jenna Josephine Turcotte</h2><br>
+                                    <p class="boxed animation animated-item-2 fade-up">You're Only as Good as Your Effort.</p>
+                                    <br>
+                                    <a class="btn btn-md animation bounce-in" href="#services">Additional Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.item-->
+            </div><!--/.carousel-inner-->
+        </div><!--/.carousel-->
+    </section><!--/#main-slider-->
+
+    <div id="content-wrapper">
+        <section id="services" class="white">
+            <div class="container">
+            <div class="gap"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="center gap fade-down section-heading">
+                            <h2 class="main-title">Services</h2>
+                            <hr>
+                            <p>I offer what a lot of other people don't offer—a little bit of everything.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-block">
+                            <div class="pull-left bounce-in">
+                                <i class="fa fa-desktop fa fa-md"></i>
+                            </div>
+                            <div class="media-body fade-up">
+                                <h3 class="media-heading">Front-End Development</h3>
+                                <p>After helping design my graduating year's yearbook in high school, I came to love visual design. I enjoy trying new design styles and making mockups for portfolios, websites, and mobile apps. Web design is something I am very passionate about.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-block">
+                            <div class="pull-left bounce-in">
+                                <i class="fa fa-edit fa fa-md"></i>
+                            </div>
+                            <div class="media-body fade-up">
+                                <h3 class="media-heading">Graphic Design</h3>
+                                <p>Much like front-end development, I also have a strong love for graphic design. Although I find it a bit of a challenge at times, I'm constantly learning new techniques and improving my work as a designer.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-block">
+                            <div class="pull-left bounce-in">
+                                <i class="fa fa-code fa fa-md"></i>
+                            </div>
+                            <div class="media-body fade-up">
+                                <h3 class="media-heading">Coding/Web Development</h3>
+                                <p>While I find learning how to code websites extremely useful and interesting, it is also a huge frustration. But hard work always pays off in the end, which is why I continue to try and learn more and more advanced coding.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                </div><!--/.row-->
+                <div class="gap"></div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-block">
+                            <div class="pull-left bounce-in">
+                                <i class="fa fa-sitemap fa fa-md"></i>
+                            </div>
+                            <div class="media-body fade-up">
+                                <h3 class="media-heading">Content Management Systems</h3>
+                                <p>CMS is an extremely useful tool when working with clients. I found it particularly interesting because you can style your website how you want, but without the hassle of knowing how to code. This gives the user easy access to the back-end of their website, as they are able to update information on their own.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-block">
+                            <div class="pull-left bounce-in">
+                                <i class="fa fa-camera-retro fa fa-md"></i>
+                            </div>
+                            <div class="media-body fade-up">
+                              <h3 class="media-heading">Photography</h3>
+                              <p>Photography is something I have enjoyed since my last year of high school. During my first year of college, I learned to really refine my skills and now photography is a skill I consider myself very good at, rather than just a hobby. I love taking nature photos, but I would really like the opportunity to do more photoshoots for portraits.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-block">
+                            <div class="pull-left bounce-in">
+                                <i class="fa fa-film fa fa-md"></i>
+                            </div>
+                            <div class="media-body fade-up">
+                                <h3 class="media-heading">Video Editing</h3>
+                                <p>Even though I love photography, I find film/videography very different and at times, a little difficult. Don't get me wrong, though. Videography can be a lot of fun too. But my interest really peaks at the chance to do editing. Taking raw footage and turning it into a well-crafted story is what makes me happy.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                </div><!--/.row-->
+            </div>
+            <div class="gap"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="center gap fade-down section-heading">
+                            <h2 class="main-title">My Skill Levels</h2>
+                            <hr>
+                            <p>Level of expertise for each skill I possess.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+            <div class="row">
+	                <div class="col-md-3">
+	                    <div class="tile-progress tile-red bounce-in">
+	                        <div class="tile-header">
+	                            <h3>Video Editing</h3>
+	                            <span>Putting together your stories/memories into timeless videos.</span>
+	                        </div>
+	                        <div class="tile-progressbar">
+	                            <span data-fill="75%" style="width: 75%;"></span>
+	                        </div>
+	                        <div class="tile-footer">
+	                            <h4>
+	                                <span class="pct-counter counter">75</span>%
+	                            </h4>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="col-md-3">
+	                    <div class="tile-progress tile-cyan bounce-in">
+	                        <div class="tile-header">
+	                            <h3>Visual Design</h3>
+	                            <span>Making your website, logo, or advertisement pretty.</span>
+	                        </div>
+	                        <div class="tile-progressbar">
+	                            <span data-fill="95%" style="width: 95%;"></span>
+	                        </div>
+	                        <div class="tile-footer">
+	                            <h4>
+	                                <span class="pct-counter counter">95</span>%
+	                            </h4>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="col-md-3">
+	                    <div class="tile-progress tile-primary bounce-in">
+	                        <div class="tile-header">
+	                            <h3>Web Development</h3>
+	                            <span>Repairing/redesigning a pre-existing website that needs some TLC or bringing your vision to life with a responsive, interactive website.</span>
+	                        </div>
+	                        <div class="tile-progressbar">
+	                            <span data-fill="65%" style="width: 65%;"></span>
+	                        </div>
+	                        <div class="tile-footer">
+	                            <h4>
+	                                <span class="pct-counter counter">65</span>%
+	                            </h4>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="col-md-3">
+	                    <div class="tile-progress tile-pink bounce-in">
+	                        <div class="tile-header">
+	                            <h3>Photography</h3>
+	                            <span>Capturing all of the world's beauty from nature, to a casual portrait, to all of life's special moments.</span>
+	                        </div>
+	                        <div class="tile-progressbar">
+	                            <span data-fill="80%" style="width: 80%;"></span>
+	                        </div>
+	                        <div class="tile-footer">
+	                            <h4>
+	                                <span class="pct-counter counter">80</span>%
+	                            </h4>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div><!--/.row-->
+        	</div>
+        </section>
+
+        <footer id="footer" class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        &copy; 2017 Jenna Turcotte. All Rights Reserved.
+                    </div>
+                    <div class="col-sm-6">
+                        <ul class="pull-right">
+                            <li><a id="gototop" class="gototop" href="#"><i class="fa fa-chevron-up"></i></a></li><!--#gototop-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer><!--/#footer-->
+    </div>
+
+
+    <script src="js/plugins.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWDPCiH080dNCTYC-uprmLOn2mt2BMSUk&amp;sensor=true"></script>
+    <script src="js/init.js"></script>
+</body>
 </html>
