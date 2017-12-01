@@ -49,14 +49,14 @@ h4 {
 }
 
 h5 {
-  font-family: 'Lato';
+  font-family: 'Lato', sans-serif;
   font-size: 28px;
   color: #000000;
   margin: -5px;
 }
 
 h6 {
-  font-family: 'Lato';
+  font-family: 'Lato' sans-serif;
   font-size: 14px;
   color: #000000;
 }
